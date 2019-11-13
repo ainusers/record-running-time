@@ -1,12 +1,10 @@
 package com.analysis.ainusers.method;
 
-import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-import javax.servlet.http.HttpServletRequest;
 /**
  * @author: tianyong
  * @date: 2019/11/12 13:53

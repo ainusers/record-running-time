@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * @author: tianyong
  * @date: 2019/11/12 13:55
- * @desciption:
+ * @desciption:测试api接口
  */
 @Controller
 @RequestMapping("/api")
