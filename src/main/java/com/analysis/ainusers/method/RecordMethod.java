@@ -25,11 +25,11 @@ public class RecordMethod {
       * @description:声明切点
     */
     // 第一种方式
-    // @Pointcut("@annotation(com.analysis.ainusers.method.Record)")
-    // private void cutpoint() {}
+    @Pointcut("@annotation(com.analysis.ainusers.method.Record)")
+    private void cutpoint() {}
     // 第二种方式 (默认切入点)
     //public static final String POINT_CUT = "execution(public * com.analysis.ainusers..*.*(..))";
-    public static final String POINT_CUT = "execution(public * *(..))";
+    //public final String POINT_CUT = "execution(public * "+ this.getClass().getResource("").getPath().substring(this.getClass().getResource("").getPath().indexOf("com")).replace("/",".") +".*.*(..))";
 
 
 
@@ -38,7 +38,8 @@ public class RecordMethod {
       * @date: 2019/11/12
       * @description:环绕通知
     */
-    @Around(POINT_CUT)
+    @Around("cutpoint()")
+    //@Around(POINT_CUT)
     public void around(ProceedingJoinPoint joinPoint) throws Throwable {
         // 获取目标：类名、方法名
         String clazzName = joinPoint.getTarget().getClass().getName();
