@@ -4,6 +4,7 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 /**
  * @author: tianyong
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Component;
  */
 @Aspect
 @Component
+@Configuration
 public class RecordMethod {
 
     // 获取目标Logger
