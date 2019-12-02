@@ -56,4 +56,12 @@
         </plugins>
     </build>
 
+    <!--github 项目对外开放依赖-->
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
 </project>
